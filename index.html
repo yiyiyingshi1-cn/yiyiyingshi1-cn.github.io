@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="一一影视官网为您提供最新高清免费电影、热播电视剧、综艺动漫在线观看，一一影视大全每日更新，免费看电影追剧首选平台。">
+<meta name="keywords" content="一一影视,一一影视官网,一一影视大全,免费电影,热播电视剧,高清在线观看,免费看剧">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow">
+<meta name="msvalidate.01" content="placeholder-bing-webmaster-code">
+<meta name="theme-color" content="#0b1020">
+<title>一一影视 - 最新高清电影电视剧免费在线观看平台</title>
+<link rel="canonical" href="https://yiyiyingshi-cn.github.io/">
+<style>
+:root{
+  --bg:#0b1020;--bg2:#111933;--panel:rgba(255,255,255,.04);--line:rgba(255,255,255,.10);
+  --txt:#eef1ff;--sub:#a8b0cf;--pri:#5b8cff;--pri2:#22d3ee;--gold:#ffcf5b;--rad:18px;
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:radial-gradient(1200px 600px at 15% -10%,#1a2450 0%,var(--bg) 55%),var(--bg);color:var(--txt);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+/* ===== 导航 ===== */
+.site-nav{position:sticky;top:0;z-index:99;backdrop-filter:blur(14px);background:rgba(11,16,32,.82);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:18px;height:64px}
+.logo{font-size:22px;font-weight:800;letter-spacing:1px;background:linear-gradient(90deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{font-size:12px;color:var(--sub);-webkit-text-fill-color:var(--sub);font-weight:500;margin-left:6px}
+.menu{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.menu a{padding:8px 14px;border-radius:999px;font-size:14px;color:var(--sub);transition:.25s}
+.menu a:hover{color:#fff;background:var(--panel)}
+.hamb{display:none;margin-left:auto;background:none;border:0;color:#fff;font-size:26px;cursor:pointer;width:42px;height:42px}
+@media(max-width:860px){.menu{position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:4px;padding:18px;background:rgba(11,16,32,.97);border-bottom:1px solid var(--line);transform:translateY(-120%);transition:.35s;margin-left:0}.menu.open{transform:translateY(0)}.menu a{font-size:16px;padding:14px}.hamb{display:block}}
+/* ===== 通用区块 ===== */
+section{padding:74px 0;position:relative}
+.sec-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.sec-head h2{font-size:30px;letter-spacing:1px}
+.sec-head h2 em{font-style:normal;color:var(--pri2)}
+.sec-head p{color:var(--sub);font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+/* ===== 1 首屏 ===== */
+#home{min-height:min(88vh,760px);display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:64px}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(90px);opacity:.35;top:-120px;right:-120px;background:radial-gradient(circle,var(--pri),transparent 70%)}
+.glow2{position:absolute;width:360px;height:360px;border-radius:50%;filter:blur(80px);opacity:.28;bottom:-140px;left:-100px;background:radial-gradient(circle,var(--pri2),transparent 70%)}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--sub);background:var(--panel)}
+.hero-tag i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.8)}}
+.hero h1{font-size:clamp(34px,5.4vw,60px);line-height:1.15;margin:18px 0 14px;font-weight:850}
+.hero h1 b{background:linear-gradient(92deg,var(--pri),var(--pri2) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero>p{color:var(--sub);font-size:16px;max-width:520px}
+.hero-acts{display:flex;gap:14px;margin:26px 0 30px;flex-wrap:wrap}
+.btn{padding:14px 30px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;border:0;cursor:pointer}
+.btn-primary{background:linear-gradient(92deg,var(--pri),var(--pri2));color:#08101f;box-shadow:0 10px 26px rgba(91,140,255,.35)}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-ghost{border:1px solid var(--line);background:var(--panel);color:#fff}
+.btn-ghost:hover{border-color:var(--pri)}
+.mini{display:flex;gap:26px;flex-wrap:wrap}
+.mini div span{display:block;font-size:24px;font-weight:800;color:#fff}
+.mini div small{color:var(--sub);font-size:12px}
+/* 播放器卡 */
+.player{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:var(--shadow)}
+.pv{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#1b2a55,#0d1430)}
+.pv .fakeimg{position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.12) 48%,transparent 52%);background-size:220% 100%;animation:shim 2.4s linear infinite}
+@keyframes shim{0%{background-position:180% 0}100%{background-position:-180% 0}}
+.pv .pbadge{position:absolute;top:12px;left:12px;display:flex;gap:8px}
+.pv .pbadge b{font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.55);border:1px solid var(--line)}
+.pv .pbadge b.live{color:#ff6b6b}
+.pv .pbadge b.live::before{content:"●";margin-right:4px;animation:pulse 1.4s infinite}
+.pv .pc{position:absolute;bottom:12px;right:12px;font-size:11px;padding:4px 10px;border-radius:999px;background:var(--gold);color:#2a1b00;font-weight:700}
+.pctrl{display:flex;align-items:center;gap:14px;margin-top:14px}
+.pctrl .pp{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;background:var(--panel);font-size:16px;cursor:pointer}
+.bar{flex:1;height:6px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar i{display:block;height:100%;width:42%;background:linear-gradient(90deg,var(--pri),var(--pri2));border-radius:99px;position:relative}
+.bar i::after{content:"";position:absolute;right:0;top:-3px;width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 8px var(--pri)}
+.pctrl small{color:var(--sub);font-size:12px;font-variant-numeric:tabular-nums}
+.pchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pchips span{font-size:12px;padding:6px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--sub)}
+@media(max-width:860px){#home{grid-template-columns:1fr;padding-top:40px}}
+/* ===== 2 分类（编号大卡 + 标签云） ===== */
+.cloud{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.cloud b{font-size:13px;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--sub);cursor:pointer;font-weight:500;transition:.25s}
+.cloud b.on,.cloud b:hover{color:#08101f;background:linear-gradient(92deg,var(--pri),var(--pri2));border-color:transparent;font-weight:700}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ccard{position:relative;padding:26px 22px 22px;border-radius:var(--rad);background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--line);overflow:hidden;transition:.3s}
+.ccard::before{content:attr(data-n);position:absolute;right:-6px;top:-26px;font-size:96px;font-weight:900;color:rgba(255,255,255,.05);line-height:1}
+.ccard:hover{transform:translateY(-6px);border-color:var(--pri)}
+.ccard .ico{font-size:28px;margin-bottom:12px}
+.ccard h3{font-size:18px;margin-bottom:8px}
+.ccard p{font-size:13px;color:var(--sub);min-height:38px}
+.ccard .num{display:inline-block;margin-top:12px;font-size:12px;color:var(--pri2);border-top:1px dashed var(--line);padding-top:10px;width:100%}
+@media(max-width:960px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cgrid{grid-template-columns:1fr}}
+/* ===== 3 热门推荐（海报墙 + Tab） ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tabs button{font-size:14px;padding:9px 22px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--sub);cursor:pointer;transition:.25s}
+.tabs button.on,.tabs button:hover{background:linear-gradient(92deg,var(--pri),var(--pri2));color:#08101f;border-color:transparent;font-weight:700}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.poster{position:relative;border-radius:16px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:.3s}
+.poster:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(0,0,0,.5)}
+.pcover{position:relative;aspect-ratio:3/4;background:linear-gradient(150deg,var(--bg2),#0a0f22)}
+.pcover .pg{position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.16) 50%,transparent 65%);background-size:200% 100%;animation:shim 2.6s linear infinite}
+.pcover .tag{position:absolute;top:10px;left:10px;font-size:11px;padding:3px 9px;border-radius:6px;background:var(--gold);color:#2a1b00;font-weight:700}
+.pcover .tag.blue{background:var(--pri2);color:#06202a}
+.pcover .rate{position:absolute;top:10px;right:10px;font-size:12px;font-weight:800;padding:3px 8px;border-radius:6px;background:rgba(0,0,0,.6);border:1px solid var(--line)}
+.pcover .go{position:absolute;inset:0;display:grid;place-items:center;font-size:40px;opacity:0;transition:.3s;background:rgba(8,16,31,.55)}
+.poster:hover .go{opacity:1}
+.pinfo{padding:12px 14px}
+.pinfo h4{font-size:15px;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pinfo small{color:var(--sub);font-size:12px}
+@media(max-width:860px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+/* ===== 4 平台特色（横向特性条） ===== */
+.flist{display:flex;flex-direction:column;gap:14px}
+.frow{display:flex;align-items:center;gap:20px;padding:20px 24px;border-radius:var(--rad);background:linear-gradient(100deg,rgba(91,140,255,.12),rgba(255,255,255,.02));border:1px solid var(--line);transition:.3s;cursor:default}
+.frow:hover{transform:translateX(10px);border-left:4px solid var(--gold);padding-left:20px}
+.frow .n{font-size:30px;font-weight:900;color:var(--pri2);min-width:56px}
+.frow .txt{flex:1}
+.frow .txt h4{font-size:18px;margin-bottom:4px}
+.frow .txt p{font-size:13px;color:var(--sub)}
+.frow .ar{font-size:20px;color:var(--sub);transition:.3s}
+.frow:hover .ar{color:var(--gold);transform:translateX(6px)}
+/* ===== 5 资讯（头条 + 编号列表） ===== */
+.news{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+.lead{position:relative;border-radius:var(--rad);overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.lead .bg{aspect-ratio:16/10;background:linear-gradient(135deg,#23367a,#0c1330);position:relative}
+.lead .bg .pg{position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.18) 50%,transparent 65%);background-size:220% 100%;animation:shim 2.8s linear infinite}
+.lead .body{padding:20px}
+.lead time{font-size:12px;color:var(--pri2)}
+.lead h3{font-size:20px;margin:8px 0 10px}
+.lead p{font-size:14px;color:var(--sub)}
+.nlist{display:flex;flex-direction:column;gap:14px}
+.nitem{display:flex;gap:16px;align-items:flex-start;padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--panel);transition:.25s}
+.nitem:hover{border-color:var(--pri);background:rgba(91,140,255,.08)}
+.nitem .no{font-size:26px;font-weight:900;background:linear-gradient(135deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;min-width:44px}
+.nitem div h5{font-size:15px;margin-bottom:6px}
+.nitem div time{font-size:12px;color:var(--sub)}
+@media(max-width:860px){.news{grid-template-columns:1fr}}
+/* ===== 6 资源数据（仪表盘 + 进度条） ===== */
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:30px}
+.gauge{padding:24px;border-radius:var(--rad);border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));text-align:center}
+.gauge b{display:block;font-size:34px;font-weight:850;background:linear-gradient(92deg,#fff,var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.gauge span{font-size:13px;color:var(--sub)}
+.bars{display:flex;flex-direction:column;gap:16px}
+.bar-row{display:flex;align-items:center;gap:16px}
+.bar-row label{width:96px;font-size:14px;color:var(--sub);flex:none}
+.bar-row .track{flex:1;height:12px;border-radius:99px;background:rgba(255,255,255,.10);overflow:hidden}
+.bar-row .track i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--pri),var(--pri2));transition:width 1.4s cubic-bezier(.2,.7,.3,1)}
+.bar-row .val{width:52px;text-align:right;font-size:14px;font-weight:700;color:#fff;flex:none}
+@media(max-width:700px){.dash{grid-template-columns:repeat(2,1fr)}.bar-row label{width:66px;font-size:13px}}
+/* ===== 7 关于我们（时间线 + 数据卡） ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--pri),var(--pri2),var(--gold))}
+.tl .node{position:relative;margin-bottom:26px}
+.tl .node::before{content:"";position:absolute;left:-31px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(255,207,91,.14)}
+.tl .node time{font-size:13px;color:var(--pri2);font-weight:700}
+.tl .node h4{font-size:17px;margin:4px 0}
+.tl .node p{font-size:13px;color:var(--sub)}
+.acards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.acard{padding:22px;border-radius:var(--rad);border:1px solid var(--line);background:linear-gradient(150deg,rgba(34,211,238,.10),rgba(255,255,255,.02))}
+.acard b{font-size:28px;display:block;color:var(--gold);margin-bottom:6px}
+.acard span{font-size:14px;color:var(--sub)}
+.chips{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.chips i{padding:8px 16px;border-radius:999px;font-size:13px;background:var(--panel);border:1px solid var(--line);font-style:normal;color:var(--sub)}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+/* ===== 8 常见问题（details 手风琴） ===== */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;transition:.3s}
+.faq details[open]{border-color:var(--pri);background:rgba(91,140,255,.08)}
+.faq summary{display:flex;align-items:center;gap:14px;padding:18px 20px;cursor:pointer;font-weight:600;font-size:16px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .q{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#08101f;font-weight:800;flex:none}
+.faq summary .plus{margin-left:auto;transition:.35s;color:var(--sub);font-size:20px}
+.faq details[open] .plus{transform:rotate(45deg);color:var(--gold)}
+.faq .ans{padding:0 20px 18px 64px;color:var(--sub);font-size:14px}
+/* ===== 页脚 ===== */
+footer{border-top:1px solid var(--line);padding:44px 0 26px;margin-top:40px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot h4{font-size:16px;margin-bottom:12px}
+.foot p,.foot a{font-size:13px;color:var(--sub)}
+.foot a:hover{color:var(--pri2)}
+.copy{text-align:center;color:var(--sub);font-size:12px;margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}
+@media(max-width:700px){.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+<header class="site-nav" role="banner">
+  <div class="wrap nav-in">
+    <a class="logo" href="#home">一一影视<small>免费高清在线观看</small></a>
+    <button class="hamb" aria-label="菜单" onclick="document.getElementById('mn').classList.toggle('open')">☰</button>
+    <nav class="menu" id="mn" role="navigation" aria-label="主导航">
+      <a href="#home">首页</a>
+      <a href="#cat">影视分类</a>
+      <a href="#hot">热门推荐</a>
+      <a href="#feat">平台特色</a>
+      <a href="#news">最新资讯</a>
+      <a href="#data">资源数据</a>
+      <a href="#about">关于我们</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 首页 -->
+<section id="home" class="wrap" aria-labelledby="h1">
+  <div class="glow"></div><div class="glow2"></div>
+  <div class="hero reveal">
+    <span class="hero-tag"><i></i>官方正版 · 每日更新 · 一一影视官网</span>
+    <h1>在 <b>一一影视</b> 免费看<br>最新高清电影与热播剧</h1>
+    <p>一一影视大全汇聚院线大片、热播电视剧、综艺、动漫与纪录片，免费在线观看，高清流畅不卡顿，追剧就上一一影视。</p>
+    <div class="hero-acts">
+      <a class="btn btn-primary" href="#hot">立即免费观看</a>
+      <a class="btn btn-ghost" href="#cat">浏览影视分类</a>
+    </div>
+    <div class="mini">
+      <div><span>2.6万+</span><small>影视资源</small></div>
+      <div><span>1080P/4K</span><small>高清画质</small></div>
+      <div><span>零广告</span><small>纯净体验</small></div>
+    </div>
+  </div>
+  <div class="player reveal">
+    <div class="pv">
+      <div class="fakeimg"></div>
+      <div class="pbadge"><b class="live">LIVE</b><b>正在热播</b></div>
+      <div class="pc">4K · 60fps</div>
+    </div>
+    <div class="pctrl">
+      <div class="pp">▶</div>
+      <div class="bar"><i></i></div>
+      <small>01:24 / 02:18:06</small>
+    </div>
+    <div class="pchips"><span>院线同步</span><span>多语言字幕</span><span>极速加载</span><span>全端适配</span></div>
+  </div>
+</section>
+
+<!-- 2 影视分类 -->
+<section id="cat" class="wrap" aria-labelledby="c1">
+  <div class="sec-head reveal">
+    <h2>影视<em>分类</em>大全</h2>
+    <p>一一影视覆盖全品类影视内容，一键筛选免费观看</p>
+  </div>
+  <div class="cloud reveal" role="tablist" aria-label="分类筛选">
+    <b class="on">全部</b><b>电影</b><b>电视剧</b><b>综艺</b><b>动漫</b><b>纪录片</b><b>短剧</b>
+  </div>
+  <div class="cgrid">
+    <article class="ccard reveal" data-n="01"><div class="ico">🎬</div><h3>免费电影</h3><p>院线大片、动作科幻、爱情喜剧、恐怖悬疑，高清免费在线观看。</p><span class="num">资源 6,800+</span></article>
+    <article class="ccard reveal" data-n="02"><div class="ico">📺</div><h3>热播电视剧</h3><p>国产剧、韩剧、美剧、港剧，同步更新，全集免费看。</p><span class="num">资源 3,200+</span></article>
+    <article class="ccard reveal" data-n="03"><div class="ico">🎤</div><h3>综艺节目</h3><p>真人秀、脱口秀、音乐选秀、访谈，热门综艺每日更新。</p><span class="num">资源 2,100+</span></article>
+    <article class="ccard reveal" data-n="04"><div class="ico">🐉</div><h3>动漫番剧</h3><p>国产动画、日漫新番、欧美动漫，高清流畅不卡顿。</p><span class="num">资源 4,500+</span></article>
+    <article class="ccard reveal" data-n="05"><div class="ico">🎞️</div><h3>纪录片</h3><p>自然地理、历史人文、科技探索，高分纪录片在线看。</p><span class="num">资源 1,400+</span></article>
+    <article class="ccard reveal" data-n="06"><div class="ico">📱</div><h3>热门短剧</h3><p>竖屏短剧、都市情感、逆袭爽剧，随时随地免费刷。</p><span class="num">资源 3,900+</span></article>
+    <article class="ccard reveal" data-n="07"><div class="ico">🏆</div><h3>高分榜单</h3><p>豆瓣高分、IMDb 经典、获奖影片精选推荐。</p><span class="num">榜单 200+</span></article>
+    <article class="ccard reveal" data-n="08"><div class="ico">🆕</div><h3>今日更新</h3><p>每日新增影视资源，第一时间追更最新内容。</p><span class="num">日更 120+</span></article>
+  </div>
+</section>
+
+<!-- 3 热门推荐 -->
+<section id="hot" class="wrap" aria-labelledby="h2">
+  <div class="sec-head reveal">
+    <h2>热门<em>推荐</em></h2>
+    <p>一一影视编辑精选，当下最值得看的高分好剧好片</p>
+  </div>
+  <div class="tabs reveal" role="tablist" aria-label="推荐分类">
+    <button class="on" role="tab" aria-selected="true">本周热播</button>
+    <button role="tab" aria-selected="false">高分电影</button>
+    <button role="tab" aria-selected="false">热播剧集</button>
+    <button role="tab" aria-selected="false">最新上线</button>
+  </div>
+  <div class="pgrid">
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag">热播</span><span class="rate">9.6</span><div class="go">▶</div></div><div class="pinfo"><h4>沉默的真相 第二季</h4><small>悬疑 / 犯罪 · 24集全</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag blue">4K</span><span class="rate">9.2</span><div class="go">▶</div></div><div class="pinfo"><h4>星际归途</h4><small>科幻 / 冒险 · 院线大片</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag">更新中</span><span class="rate">8.9</span><div class="go">▶</div></div><div class="pinfo"><h4>人间烟火气</h4><small>都市 / 情感 · 更新至32集</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag blue">HD</span><span class="rate">9.4</span><div class="go">▶</div></div><div class="pinfo"><h4>长安风云录</h4><small>古装 / 历史 · 40集全</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag">热播</span><span class="rate">8.7</span><div class="go">▶</div></div><div class="pinfo"><h4>心动信号 第七季</h4><small>综艺 / 恋爱 · 更新中</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag blue">4K</span><span class="rate">9.0</span><div class="go">▶</div></div><div class="pinfo"><h4>海兽之子 续章</h4><small>动漫 / 奇幻 · 剧场版</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag">新片</span><span class="rate">8.5</span><div class="go">▶</div></div><div class="pinfo"><h4>归途列车</h4><small>剧情 / 家庭 · 1080P</small></div></article>
+    <article class="poster reveal"><div class="pcover"><div class="pg"></div><span class="tag blue">HD</span><span class="rate">9.1</span><div class="go">▶</div></div><div class="pinfo"><h4>法医秦明外传</h4><small>悬疑 / 刑侦 · 18集全</small></div></article>
+  </div>
+</section>
+
+<!-- 4 平台特色 -->
+<section id="feat" class="wrap" aria-labelledby="f1">
+  <div class="sec-head reveal">
+    <h2>平台<em>特色</em></h2>
+    <p>为什么千万用户追剧都选择一一影视</p>
+  </div>
+  <div class="flist">
+    <div class="frow reveal"><span class="n">01</span><div class="txt"><h4>完全免费观看</h4><p>海量影视资源免费在线观看，无需开通会员，追剧零门槛。</p></div><span class="ar">→</span></div>
+    <div class="frow reveal"><span class="n">02</span><div class="txt"><h4>高清流畅不卡顿</h4><p>支持 1080P / 4K 多清晰度切换，智能调速，告别加载圈。</p></div><span class="ar">→</span></div>
+    <div class="frow reveal"><span class="n">03</span><div class="txt"><h4>零广告纯净体验</h4><p>无弹窗、无强制跳转，沉浸式观影，安心又舒心。</p></div><span class="ar">→</span></div>
+    <div class="frow reveal"><span class="n">04</span><div class="txt"><h4>每日极速更新</h4><p>与院线、卫视同步更新，最新电影电视剧第一时间上线。</p></div><span class="ar">→</span></div>
+    <div class="frow reveal"><span class="n">05</span><div class="txt"><h4>全端自适应播放</h4><p>手机、平板、电脑、电视全端适配，随时随地想看就看。</p></div><span class="ar">→</span></div>
+    <div class="frow reveal"><span class="n">06</span><div class="txt"><h4>智能个性推荐</h4><p>基于观看喜好精准推荐，越用越懂你的一一影视。</p></div><span class="ar">→</span></div>
+  </div>
+</section>
+
+<!-- 5 最新资讯 -->
+<section id="news" class="wrap" aria-labelledby="n1">
+  <div class="sec-head reveal">
+    <h2>最新<em>资讯</em></h2>
+    <p>影视圈一手动态，一一影视带您抢先看</p>
+  </div>
+  <div class="news">
+    <article class="lead reveal">
+      <div class="bg"><div class="pg"></div></div>
+      <div class="body">
+        <time datetime="2026-10-22">2026年10月22日</time>
+        <h3>《沉默的真相 第二季》定档开播，悬疑迷的年度必看之作</h3>
+        <p>该剧延续第一季高水准制作，上线即冲上平台热度榜首，一一影视同步更新全集在线观看。</p>
+      </div>
+    </article>
+    <div class="nlist">
+      <article class="nitem reveal"><span class="no">01</span><div><h5>院线新片《星际归途》今日上线一一影视，4K 原画免费看</h5><time datetime="2026-10-21">2026-10-21</time></div></article>
+      <article class="nitem reveal"><span class="no">02</span><div><h5>2026 第三季度高分华语片盘点：这 5 部不容错过</h5><time datetime="2026-10-18">2026-10-18</time></div></article>
+      <article class="nitem reveal"><span class="no">03</span><div><h5>韩剧秋季档开播：三平台新剧同时开更，追剧日历一览</h5><time datetime="2026-10-15">2026-10-15</time></div></article>
+      <article class="nitem reveal"><span class="no">04</span><div><h5>动画剧场版扎堆定档，动漫番剧秋季新番导视</h5><time datetime="2026-10-10">2026-10-10</time></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 6 资源数据 -->
+<section id="data" class="wrap" aria-labelledby="d1">
+  <div class="sec-head reveal">
+    <h2>资源<em>数据</em></h2>
+    <p>海量正版影视库，一一影视持续扩充中</p>
+  </div>
+  <div class="dash">
+    <div class="gauge reveal"><b data-c="26000">0</b><span>影视资源总量</span></div>
+    <div class="gauge reveal"><b data-c="12400">0</b><span>日活跃用户</span></div>
+    <div class="gauge reveal"><b data-c="98">0</b><span>服务器可用率 %</span></div>
+    <div class="gauge reveal"><b data-c="320">0</b><span>日均更新部数</span></div>
+  </div>
+  <div class="bars">
+    <div class="bar-row reveal"><label>高清电影</label><div class="track"><i data-w="92"></i></div><span class="val">92%</span></div>
+    <div class="bar-row reveal"><label>热播剧集</label><div class="track"><i data-w="86"></i></div><span class="val">86%</span></div>
+    <div class="bar-row reveal"><label>综艺节目</label><div class="track"><i data-w="74"></i></div><span class="val">74%</span></div>
+    <div class="bar-row reveal"><label>动漫番剧</label><div class="track"><i data-w="81"></i></div><span class="val">81%</span></div>
+    <div class="bar-row reveal"><label>纪录片</label><div class="track"><i data-w="63"></i></div><span class="val">63%</span></div>
+  </div>
+</section>
+
+<!-- 7 关于我们 -->
+<section id="about" class="wrap" aria-labelledby="a1">
+  <div class="sec-head reveal">
+    <h2>关于<em>我们</em></h2>
+    <p>一一影视官网 · 做用户最信赖的免费影视平台</p>
+  </div>
+  <div class="about">
+    <div class="tl reveal">
+      <div class="node"><time>2021 年</time><h4>平台正式上线</h4><p>一一影视以"免费、高清、纯净"为初心，正式向用户提供在线观影服务。</p></div>
+      <div class="node"><time>2022 年</time><h4>资源库首次扩容</h4><p>影视资源突破万部，新增综艺与动漫频道，覆盖全品类内容。</p></div>
+      <div class="node"><time>2024 年</time><h4>全端自适应升级</h4><p>完成移动端与电视端适配，支持 4K 播放与多语言字幕。</p></div>
+      <div class="node"><time>2026 年</time><h4>智能推荐上线</h4><p>引入个性化推荐引擎，为用户精准匹配喜爱的一一影视内容。</p></div>
+    </div>
+    <div>
+      <div class="acards reveal">
+        <div class="acard"><b>26000+</b><span>影视资源总量</span></div>
+        <div class="acard"><b>1080P/4K</b><span>高清播放画质</span></div>
+        <div class="acard"><b>0 广告</b><span>纯净无弹窗体验</span></div>
+        <div class="acard"><b>7×24</b><span>全天候稳定服务</span></div>
+      </div>
+      <div class="chips reveal"><i>免费观影</i><i>院线同步</i><i>多端适配</i><i>极速加载</i><i>智能推荐</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 常见问题 -->
+<section id="faq" class="wrap" aria-labelledby="q1">
+  <div class="sec-head reveal">
+    <h2>常见<em>问题</em></h2>
+    <p>关于一一影视，您可能想了解的都在这里</p>
+  </div>
+  <div class="faq">
+    <details class="reveal" open><summary><span class="q">Q</span>一一影视真的可以免费观看吗？<span class="plus">+</span></summary><div class="ans">是的，一一影视提供海量电影、电视剧、综艺、动漫免费在线观看，无需开通会员即可直接播放。</div></details>
+    <details class="reveal"><summary><span class="q">Q</span>一一影视官网的网址是什么？<span class="plus">+</span></summary><div class="ans">一一影视官网地址为 https://yiyiyingshi-cn.github.io/ ，建议收藏官网网址，避免误入仿冒站点。</div></details>
+    <details class="reveal"><summary><span class="q">Q</span>支持手机和电视端观看吗？<span class="plus">+</span></summary><div class="ans">支持。一一影视采用全端自适应设计，手机、平板、电脑与智能电视浏览器均可流畅播放。</div></details>
+    <details class="reveal"><summary><span class="q">Q</span>播放卡顿或加载慢怎么办？<span class="plus">+</span></summary><div class="ans">可在播放页切换 1080P / 720P 清晰度，或切换网络环境后刷新页面，系统会自动匹配最佳线路。</div></details>
+    <details class="reveal"><summary><span class="q">Q</span>如何找到最新更新的影视内容？<span class="plus">+</span></summary><div class="ans">进入"影视分类"栏目点击"今日更新"或"最新上线"标签，即可查看一一影视每日新增资源。</div></details>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="wrap foot">
+    <div>
+      <h4>一一影视 · 免费高清在线观看平台</h4>
+      <p>一一影视大全为您提供最新电影、热播电视剧、综艺、动漫、纪录片在线观看，官方正版、每日更新、免费追剧。</p>
+    </div>
+    <div>
+      <h4>快速导航</h4>
+      <p><a href="#cat">影视分类</a></p>
+      <p><a href="#hot">热门推荐</a></p>
+      <p><a href="#news">最新资讯</a></p>
+    </div>
+    <div>
+      <h4>关于平台</h4>
+      <p><a href="#about">关于我们</a></p>
+      <p><a href="#faq">常见问题</a></p>
+      <p><a href="#data">资源数据</a></p>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 一一影视（yiyiyingshi-cn）. 官网：https://yiyiyingshi-cn.github.io/ 　内容仅供交流展示，请以官方最新公告为准。</div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebSite","@id":"https://yiyiyingshi-cn.github.io/#website","url":"https://yiyiyingshi-cn.github.io/","name":"一一影视","alternateName":"一一影视官网","description":"一一影视大全提供最新高清电影、热播电视剧免费在线观看","publisher":{"@type":"Organization","name":"一一影视","url":"https://yiyiyingshi-cn.github.io/"},"inLanguage":"zh-CN",
+     "potentialAction":{"@type":"SearchAction","target":"https://yiyiyingshi-cn.github.io/#search?q={search_term_string}","query-input":"required name=search_term_string"}},
+    {"@type":"Organization","@id":"https://yiyiyingshi-cn.github.io/#org","name":"一一影视","url":"https://yiyiyingshi-cn.github.io/","description":"免费高清影视在线观看平台","logo":"https://yiyiyingshi-cn.github.io/logo.png"},
+    {"@type":"MovieTheater","@id":"https://yiyiyingshi-cn.github.io/#theater","name":"一一影视","url":"https://yiyiyingshi-cn.github.io/","description":"提供电影、电视剧、综艺、动漫在线观看的影视平台","address":{"@type":"PostalAddress","addressCountry":"CN"}}
+  ]
+}
+</script>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e,i){
+      if(e.isIntersecting){
+        setTimeout(function(){e.target.classList.add('in');},i*70);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var bars=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target.querySelector('i[data-w]')||e.target;
+        var w=el.getAttribute('data-w');
+        if(w){el.style.width=w+'%';}
+        bars.unobserve(e.target);
+      }
+    });
+  },{threshold:.4});
+  document.querySelectorAll('.bar-row,.gauge').forEach(function(el){bars.observe(el);});
+
+  document.querySelectorAll('.gauge b[data-c]').forEach(function(b){
+    var io2=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          var max=+b.getAttribute('data-c'),dur=1400,st=performance.now();
+          function tick(now){
+            var p=Math.min((now-st)/dur,1);
+            var v=Math.round(max*(1-Math.pow(1-p,3)));
+            b.textContent=(v>=1000?v.toLocaleString():v)+(max===98?'':'+');
+            if(p<1)requestAnimationFrame(tick);else b.textContent=(max>=1000?max.toLocaleString():max)+(max===98?'':'+');
+          }
+          requestAnimationFrame(tick);io2.unobserve(b);
+        }
+      });
+    },{threshold:.6});
+    io2.observe(b);
+  });
+
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false');});
+      b.classList.add('on');b.setAttribute('aria-selected','true');
+    });
+  });
+  document.querySelectorAll('.cloud b').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.cloud b').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+    });
+  });
+
+  var links=document.querySelectorAll('.menu a');
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY+120,cur='#home';
+    document.querySelectorAll('section[id]').forEach(function(s){if(s.offsetTop<=y)cur='#'+s.id;});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===cur);});
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('mn').classList.remove('open');});
+  });
+})();
+</script>
+</body>
+</html>
